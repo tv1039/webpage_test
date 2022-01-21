@@ -1,0 +1,449 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Spoqa Han Sans Neo", "Sans-serif";
+  margin: 0 auto;
+  color: #3f464d;
+}
+
+a {
+  all: unset;
+}
+
+a:link {
+  text-decoration: none;
+  color: #3f464d;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #3f464d;
+}
+
+a:active {
+  text-decoration: none;
+  color: #3f464d;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #3f464d;
+}
+
+li a:hover {
+  cursor: pointer;
+}
+
+.inner {
+  width: 100%;
+  /* 가로 사이즈가 1200px 넘는 해상도에서는 max-width 설정 */
+  height: 100%;
+  /* align-items 등으로 수직 가운데 정렬을 위해, 알맞은 height 설정이 필요함 */
+  margin: 0 auto;
+  /* 가운데 정렬: 동일 요소에 width 가 설정되어 있을 때에만 적용 */
+  padding: 0rem 2rem;
+  /* 좌우 padding 을 살짝 주어서, 좌우에 딱 붙지 않도록 함 */
+  overflow: hidden;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.head-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head-container .head-brand {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.head-container .head-brand a:hover {
+  color: #2186c4;
+  cursor: pointer;
+}
+
+.head-container .head-blog {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.head-container .head-blog a:hover {
+  color: #2186c4;
+  cursor: pointer;
+}
+
+section {
+  width: 100%;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.main {
+  height: 360px;
+  background-image: url("https://placeimg.com/1280/960/people");
+  background-position: 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(47, 48, 49);
+  opacity: 0.8;
+  z-index: 2;
+  margin-top: 60px;
+}
+
+.title-container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+}
+
+.message {
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: #ffffff;
+  line-height: 2rem;
+}
+
+.skill-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+}
+
+.skill {
+  width: 25%;
+  background-color: white;
+  /* box-shadow: 블럭에 그림자를 적용하는 CSS 기능
+     https://developer.mozilla.org/ko/docs/Web/CSS/box-shadow 
+     offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 10px 10px 10px -5px rgba(25, 42, 70, 0.2);
+  display: flex;
+  align-items: stretch;
+  border-radius: 9px;
+  padding: 0.5em 1em;
+  margin: 0 1em;
+  transition: 0.4s;
+}
+
+.skill:hover {
+  transform: translate(0, -5px);
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  margin: 0 7px;
+}
+
+.skill-title {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.skill-name {
+  font-weight: bold;
+  color: #545e6f;
+  margin-bottom: 0.2rem;
+}
+
+.skill-usage {
+  font-size: 0.9rem;
+  color: #545e6f;
+  margin-bottom: 0.2rem;
+}
+
+.python-style {
+  color: #2186c4;
+}
+
+.analysis-style {
+  color: #ff8066;
+}
+
+.ai-style {
+  color: #f7df1e;
+}
+
+.vue-style {
+  color: #2e7d32;
+}
+
+.section-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-top: 2rem;
+}
+
+.section-title-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.roadmap-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #545e6f;
+}
+
+.arrow-container {
+  display: flex;
+}
+
+.slide-prev {
+  font-size: 2em;
+  cursor: pointer;
+  color: rgb(47, 48, 89);
+  margin: 0;
+}
+
+.slide-next {
+  font-size: 2em;
+  cursor: pointer;
+  color: #cfd8dc;
+  margin: 0;
+}
+
+.slide-prev-hover:hover {
+  transition: transform 0.5s;
+  transform: translateX(-2px);
+}
+
+.slide-next-hover:hover {
+  transition: transform 0.5s;
+  transform: translateX(2px);
+}
+
+.class-list {
+  display: flex;
+  list-style: none;
+  padding: 1rem 0;
+  overflow: none;
+}
+
+.class-card {
+  max-width: 240px;
+  box-shadow: 10px 10px 10px -5px rgba(25, 42, 70, 0.2);
+  border-radius: 8px;
+  margin: 0 10px;
+  transition: 0.4s;
+  flex-shrink: 0;
+}
+
+.class-card img {
+  max-width: 240px;
+  border-radius: 8px 8px 0 0;
+}
+
+.class-card:hover {
+  box-shadow: 10px 10px 10px -5px rgba(25, 42, 70, 0.2);
+  transform: translate(0, -5px);
+}
+
+.class-container {
+  width: 100%;
+  padding: 0.5rem 1rem 1rem 1rem;
+}
+
+.class-container-skill {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom: 1rem;
+}
+
+.class-container-skill-text {
+  font-size: 0.8rem;
+}
+
+.class-container-skill-level {
+  font-size: 0.7rem;
+  color: #ffffff;
+  background-color: #0d47a1;
+  padding: 0.2rem;
+}
+
+.class-desc {
+  width: 100%;
+  margin-top: 1rem;
+  color: #545e6f;
+}
+
+.class-desc:hover {
+  color: #2189c4;
+}
+
+.class-maintitle {
+  font-weight: bold;
+  color: inherit;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0.5rem;
+}
+
+.class-subtitle {
+  font-size: 0.9rem;
+  color: inherit;
+  line-height: 1.5rem;
+}
+
+footer {
+  border-top: 1px solid #e4e4e4;
+  background-color: #f8f9fa;
+  padding: 1rem 0;
+  margin: 1rem 0;
+}
+
+.footer-message {
+  font-weight: bold;
+  color: #545e6f;
+  margin: 0.3rem 0.5rem;
+}
+
+.footer-contact {
+  color: #545e6f;
+  margin: 0 0.5rem;
+}
+
+.footer-copyright {
+  color: #545e6f;
+  margin: 1rem 0.5rem;
+}
+
+#backtotop {
+  background-color: rgb(47, 48, 89);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 20px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition-property: background-color, opacity, visibility;
+  transition-duration: 0.3s, 0.5s, 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+}
+
+#backtotop::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-size: 1.5rem;
+  line-height: 40px;
+  color: #fff;
+}
+
+#backtotop.show:hover {
+  cursor: pointer;
+  background-color: #2186c4;
+}
+
+#backtotop.show {
+  opacity: 1;
+  visibility: visible;
+  background-color: rgb(47, 48, 49);
+}
+
+/* drag 할 수 있는 아이템임을 나타내는 표시를 포인터로 변경함 */
+ul li img:hover {
+  cursor: grab;
+  /* IE11에서는 지원 안함 */
+}
+
+/* dragging 중인 상태에서 잡는 표시를 포인터로 변경함 */
+ul li img:active {
+  cursor: grabbing;
+  /* IE11에서는 지원 안함 */
+}
+
+@media only screen and (min-width: 1200px) {
+  .inner {
+    max-width: 1200px;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .skill {
+    display: none !important;
+  }
+
+  .roadmap-desc {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .head-container .head-brand {
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+
+  .head-container .head-blog {
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+
+  .title {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #ffffff;
+    padding-bottom: 0.8rem;
+  }
+
+  .message {
+    font-size: 1.3rem;
+    font-weight: normal;
+    color: #ffffff;
+    line-height: 2rem;
+  }
+
+  .skill {
+    padding: 0em 1em;
+  }
+
+  .skill-title {
+    margin: 0 1em;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    color: #0d47a1;
+  }
+
+  .skill-box {
+    display: none !important;
+  }
+}
