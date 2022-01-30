@@ -390,6 +390,11 @@ ul li img:active {
   /* IE11에서는 지원 안함 */
 }
 
+.news {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff6ae;
+}
 @media only screen and (min-width: 1200px) {
   .inner {
     max-width: 1200px;
@@ -446,4 +451,45 @@ ul li img:active {
   .skill-box {
     display: none !important;
   }
+
+  .class-container-skill{
+    display: none;
+  }
+
+  .class-container {
+    padding: 0.5rem;
+  }
+
+  .class-desc {
+    margin-top: 0.3rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 0.8rem;
+  }
+
+  .message {
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: #fff;
+    line-height: 2rem;  
+  }
+
+  .class-container-skill{
+    display: none;
+  }
+
+  .class-container {
+    padding: 0.5rem;
+  }
+
+  .class-desc {
+    margin-top: 0.3rem;
+  }
+
 }
